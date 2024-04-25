@@ -8,4 +8,3 @@ https://arduino.stackexchange.com/questions/35873/whats-the-difference-between-a
 https://components101.com/modules/l293n-motor-driver-module   --- l298n configuration
 
 https://drive.google.com/file/d/1WDyfUH6FnJeDbSP0XKtv6eiSfCAfAm4r/view?usp=drive_link   --- shady API link (ANDROID ONLY)
-
