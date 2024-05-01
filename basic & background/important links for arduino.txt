@@ -6,5 +6,6 @@ https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/ 
 https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/   --- analogWrite() API
 https://arduino.stackexchange.com/questions/35873/whats-the-difference-between-analogwrite-and-digitalwrite   --- analog vs digital write stack exchange
 https://components101.com/modules/l293n-motor-driver-module   --- l298n configuration
+https://docs.arduino.cc/learn/electronics/servo-motors/   ---- servo tutorial
 
 https://drive.google.com/file/d/1WDyfUH6FnJeDbSP0XKtv6eiSfCAfAm4r/view?usp=drive_link   --- shady API link (ANDROID ONLY)
