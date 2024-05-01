@@ -1,0 +1,43 @@
+/*
+simple continuous servo manipulation using hc05 & continuous servo
+should be useful for the head
+
+tutorials used
+https://www.youtube.com/watch?v=uT8-HPMS1cU&ab_channel=TechatHome   ---- hc05 blue tooth tutorial
+https://docs.arduino.cc/learn/electronics/servo-motors/   ---- servo tutorial
+
+*/
+#include <Servo.h> //make sure it's capitalized,, class names are case sensitive!
+
+
+Servo headMotor; //initialize headMotor object of Servo class,, be sure to initalize outside of setup
+//hopefully you know which motor your using (continuous or non-con)
+//if its non-con: write will set the position to be moved to (0 - 180)
+// if its con: write will set speed (0 - 180) (90 being no movement),,, note that 0 is clockwise & 180 is ccw
+char command;// var that holds the ASCII character given from the hc05 & BT app,, refer background to learn about hc05 & app
+
+
+void setup() {
+  headMotor.attach(3);//signal pin is attatcehed to pin 3 
+  headMotor.write(90);//set headMotor back to original position / origin
+
+  Serial.begin(9600);//baud rate can be set through ardy ide serial monitor,, no need for it afaik
+}
+
+void loop() {//go ccw for 5 seconds than go cw for 5 seconds
+  if(Serial.available() > 0){
+
+    command = Serial.read();//take command from app
+    Serial.write(command);//print out command for clarity
+    Serial.write('\n');
+
+    switch(command){
+      case 'j':
+        headMotor.write(0);//cw
+        break;
+      case 'k':
+        headMotor.write(180);//ccw
+      break;
+    }
+  }
+}
