@@ -3,4 +3,5 @@ Arduino IDE,
 Arduino UNO,
 HC-05 bluetooth module,
 l298n motor controller,
-DC motor
+DC motor,
+Continuous servo
